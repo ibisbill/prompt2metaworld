@@ -5,3 +5,7 @@ metaworld
 dm_env
 dm_control
 mujoco_py
+
+# dev / testing
+pytest>=7.0
+pytest-cov

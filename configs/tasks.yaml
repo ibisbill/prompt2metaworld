@@ -1,0 +1,65 @@
+# MetaWorld task registry
+# Each entry: task_name → description used in LLM prompts
+
+door-open:
+  description: >
+    Push the door open by rotating it around its revolving joint.
+    The gripper must contact the door handle and push it sideways.
+  object1: door handle
+  object2: door panel
+
+door-close:
+  description: >
+    Push the door closed by rotating it back to the closed position
+    around its revolving joint.
+  object1: door handle
+  object2: door panel
+
+drawer-open:
+  description: >
+    Grasp the drawer handle and pull it outward away from the cabinet.
+  object1: drawer handle
+  object2: cabinet body
+
+drawer-close:
+  description: >
+    Push the drawer handle inward toward the cabinet to close it.
+  object1: drawer handle
+  object2: cabinet body
+
+button-press:
+  description: >
+    Move the gripper directly above the button and press it downward
+    until it is fully depressed.
+  object1: button
+  object2: button base
+
+reach:
+  description: >
+    Move the gripper to the goal position as directly as possible.
+  object1: gripper
+  object2: null
+
+push:
+  description: >
+    Push the puck along the table surface to the goal position.
+  object1: puck
+  object2: null
+
+pick-place:
+  description: >
+    Grasp the object, lift it, and place it at the goal position.
+  object1: target object
+  object2: null
+
+hammer:
+  description: >
+    Strike the nail with the hammer head to drive it into the surface.
+  object1: hammer
+  object2: nail
+
+peg-insert-side:
+  description: >
+    Insert the peg into the hole from the side.
+  object1: peg
+  object2: hole

@@ -1,0 +1,26 @@
+# LLM-MPC default hyperparameters
+# Override any of these via CLI flags in scripts/run_mpc.py
+
+model: gpt-4-32k
+
+# Planning
+candidates: 5          # number of candidate actions generated per step
+horizon: 3             # mental simulation lookahead steps
+max_steps: 100         # maximum env steps per episode
+
+# Surprise detection thresholds (L2 norm of gripper + object-1 displacement)
+surprise_threshold_high: 0.08
+surprise_threshold_medium: 0.03
+consecutive_surprises_for_reset: 3
+
+# LLM sampling temperatures (lower = more deterministic)
+temperature_generate: 0.8    # candidate generation — higher for diversity
+temperature_simulate: 0.3    # mental simulation — lower for consistency
+temperature_surprise: 0.2    # surprise analysis — low for reliable parsing
+
+# Episodic memory
+memory_window_size: 8         # recent entries kept in full detail
+memory_compress_threshold: 12 # compress when total entries exceed this
+
+# API
+max_wait_seconds: 40
