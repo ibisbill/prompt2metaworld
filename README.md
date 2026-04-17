@@ -1,6 +1,6 @@
 # Prompt2MetaWorld
 
-Zero-shot robot control in [MetaWorld](https://meta-world.github.io/) using large language models — no training, no fine-tuning, no reward shaping.
+Zero-shot robot control in [MetaWorld](https://meta-world.github.io/) using large language models.
 
 Two methods are included:
 
@@ -53,9 +53,9 @@ Episodic Memory               p2mw/mpc/memory.py
     └──────────────────────────────────────────── next step
 ```
 
-### Novel Contributions
+### Designs
 
-| # | Contribution | Where |
+| # | Design | Where |
 |---|---|---|
 | 1 | **Semantic state abstraction** — 39-dim obs → structured text the LLM can reason about | `p2mw/mpc/semantic.py` |
 | 2 | **Mental simulation (imagined MPC)** — LLM scores each candidate via K-step language rollout | `p2mw/mpc/controller.py` |
